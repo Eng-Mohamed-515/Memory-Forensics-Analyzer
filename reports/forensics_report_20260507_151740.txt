@@ -1,0 +1,211 @@
+Memory Forensics Report — 20260507_151740
+Dump: D:/volatility3-develop/memory_forensics_project/dumps/cridex.vmem
+============================================================
+
+
+############################################################
+# TAB: Process List
+############################################################
+
+
+============================================================
+  PROCESS LIST (windows.pslist)
+  Dump: cridex.vmem
+  Time: 2026-05-07 14:54:09
+============================================================
+
+[!] ERROR: Command timed out after 120 seconds for plugin 'windows.pslist'.
+
+
+============================================================
+  PROCESS TREE (windows.pstree)
+  Dump: cridex.vmem
+  Time: 2026-05-07 14:56:09
+============================================================
+
+[!] ERROR: Command timed out after 120 seconds for plugin 'windows.pstree'.
+
+
+============================================================
+  CODE INJECTION DETECTION (windows.malfind)
+  Dump: cridex.vmem
+  Time: 2026-05-07 14:58:09
+============================================================
+
+[!] ERROR: Command timed out after 120 seconds for plugin 'windows.malfind'.
+
+
+============================================================
+  DLL LIST (windows.dlllist)
+  Dump: cridex.vmem
+  Time: 2026-05-07 15:00:09
+============================================================
+
+[!] ERROR: Command timed out after 120 seconds for plugin 'windows.dlllist'.
+
+
+############################################################
+# TAB: Network
+############################################################
+
+
+============================================================
+  NETWORK CONNECTIONS (windows.netstat)
+  Dump: cridex.vmem
+  Time: 2026-05-07 15:02:09
+============================================================
+
+[!] ERROR: Command timed out after 120 seconds for plugin 'windows.netstat'.
+
+
+============================================================
+  NETWORK SCAN (windows.netscan)
+  Dump: cridex.vmem
+  Time: 2026-05-07 15:04:09
+============================================================
+
+[!] ERROR: Command timed out after 120 seconds for plugin 'windows.netscan'.
+
+
+############################################################
+# TAB: Keys & Credentials
+############################################################
+
+
+============================================================
+  PASSWORD HASHES (windows.hashdump)
+  Dump: cridex.vmem
+  Time: 2026-05-07 15:06:09
+============================================================
+
+[!] ERROR: Command timed out after 120 seconds for plugin 'windows.hashdump'.
+
+
+============================================================
+  LSA SECRETS (windows.lsadump)
+  Dump: cridex.vmem
+  Time: 2026-05-07 15:08:09
+============================================================
+
+[!] ERROR: Command timed out after 120 seconds for plugin 'windows.lsadump'.
+
+
+============================================================
+  CACHED CREDENTIALS (windows.cachedump)
+  Dump: cridex.vmem
+  Time: 2026-05-07 15:10:09
+============================================================
+
+[!] ERROR: Command timed out after 120 seconds for plugin 'windows.cachedump'.
+
+
+============================================================
+  KEY / SECRET PATTERN SEARCH (windows.cmdline)
+  Dump: cridex.vmem
+  Time: 2026-05-07 15:12:09
+============================================================
+
+[!] ERROR: Command timed out after 120 seconds for plugin 'windows.cmdline'.
+────────────────────────────────────────────────────────────
+  No obvious key/secret patterns found in cmdline output.
+────────────────────────────────────────────────────────────
+
+
+
+############################################################
+# TAB: YARA Scan
+############################################################
+
+
+============================================================
+  YARA SCAN RESULTS
+  Dump: cridex.vmem
+  Time: 2026-05-07 15:14:10
+============================================================
+
+  Rule: SuspiciousProcess
+    Description: Detects suspicious process names and strings
+    Matched strings:
+      Offset 0x00024CC0 | $mz
+      Offset 0x00127000 | $mz
+      Offset 0x0013E000 | $mz
+      Offset 0x004D7000 | $mz
+      Offset 0x004E03C8 | $mz
+      Offset 0x0052AB1E | $mz
+      Offset 0x0059FA64 | $mz
+      Offset 0x00610DBC | $mz
+      Offset 0x006D0000 | $mz
+      Offset 0x01109838 | $mz
+      Offset 0x0110A020 | $mz
+      Offset 0x012C997C | $mz
+      Offset 0x012CA050 | $mz
+      Offset 0x012CA090 | $mz
+      Offset 0x02011391 | $mz
+      Offset 0x024036C9 | $mz
+      Offset 0x027D2000 | $mz
+      Offset 0x027E4000 | $mz
+      Offset 0x027FB000 | $mz
+      Offset 0x028B5000 | $mz
+      Offset 0x028C8000 | $mz
+      Offset 0x0290F000 | $mz
+      Offset 0x03DA4AB3 | $mz
+      Offset 0x03DA849A | $mz
+      Offset 0x03EEF000 | $mz
+      Offset 0x04165A98 | $mz
+      Offset 0x041F44CD | $mz
+      Offset 0x046DB2D9 | $mz
+      Offset 0x046EB247 | $mz
+      Offset 0x04725281 | $mz
+      Offset 0x0474B000 | $mz
+      Offset 0x0478556A | $mz
+      Offset 0x04811000 | $mz
+      Offset 0x04813000 | $mz
+      Offset 0x04814000 | $mz
+      Offset 0x04816000 | $mz
+      Offset 0x04818000 | $mz
+      Offset 0x04819CDB | $mz
+      Offset 0x0481B000 | $mz
+      Offset 0x0481D000 | $mz
+      Offset 0x04820000 | $mz
+      Offset 0x04823000 | $mz
+      Offset 0x04825000 | $mz
+      Offset 0x04839000 | $mz
+      Offset 0x0483E000 | $mz
+      Offset 0x0483FAB2 | $mz
+      Offset 0x04847000 | $mz
+      Offset 0x04848000 | $mz
+      Offset 0x04848E63 | $mz
+      Offset 0x04849000 | $mz
+────────────────────────────────────────────────────────────
+  Total YARA matches: 1
+────────────────────────────────────────────────────────────
+
+
+
+############################################################
+# TAB: Summary
+############################################################
+
+============================================================
+  FORENSIC ANALYSIS SUMMARY
+  Dump: cridex.vmem
+  Time: 2026-05-07 15:14:12
+============================================================
+
+  [PROCESSES]
+    Total process entries detected : 0
+    Malfind output lines (suspicious): 5
+
+  [NETWORK]
+    Connection / socket entries     : 0
+
+  [CREDENTIALS]
+    Credential-related entries      : 8
+
+  [YARA]
+    YARA rule matches               : 1
+
+============================================================
+  End of summary.
+============================================================
+
